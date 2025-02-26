@@ -58,7 +58,7 @@ const Home = () => {
     <>
 
         {data.length <= 0 ? (
-          
+
           <Empty
 
             image="https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg"
@@ -93,10 +93,10 @@ const Home = () => {
               </thead>
 
               <tbody>
-                {data.map((item) => (
+                {data.map((item, index) => (
               
                   <tr key={item.id}>
-                    <td>{item.id}</td>
+                    <td>{index + 1}</td>
                     <td>{item.title}</td>
                     <td>{item.description}</td>
                     <td>{item.city}</td>
