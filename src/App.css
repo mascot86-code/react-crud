@@ -40,3 +40,9 @@
 .read-the-docs {
   color: #888;
 }
+
+.toolbar {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  gap: 20px;
+}

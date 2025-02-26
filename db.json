@@ -5,7 +5,7 @@
       "title": "Новинки Kosmoteros 2026",
       "description": "Обзор новых средств и методик от Kosmoteros.",
       "date": "12.02.2025",
-      "time": "15:00",
+      "time": "19:20",
       "photo": "https://picsum.photos/id/1/750/730",
       "city": "Moscow",
       "limitation": false
@@ -67,6 +67,20 @@
       "date": "15.02.2025",
       "time": "17:00",
       "photo": "https://picsum.photos/id/8/750/730"
+    },
+    {
+      "id": "c606",
+      "title": "Семинар Друшко 2026",
+      "description": "Обзор новых средств и методик от Kosmoteros.",
+      "date": "2025-02-12",
+      "time": "12:40"
+    },
+    {
+      "id": "505f2859-099a-c192-ab92-43c399bd6924",
+      "title": "Семинар Бузовой 2025",
+      "description": "Разбор новейших тенденций в косметологии и трендовых продуктов.",
+      "date": "2025-01-12",
+      "time": "13:50"
     }
   ]
 }

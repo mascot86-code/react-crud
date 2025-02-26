@@ -2,11 +2,15 @@ import axios from "axios"
 import { useContext, useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import SeminarsContext from "./context/seminars-context"
+import uuid from 'react-uuid';
 
 
 const Create = () => { 
 
+  const uid = uuid()
+
   const[seminar,setSeminar] = useState({
+    id: uid,
     title: "",
     description: "",
     date: "",

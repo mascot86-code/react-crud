@@ -2,15 +2,18 @@ import { useContext, useState, useEffect } from "react"
 import { Link} from "react-router-dom";
 import TotalSeminars from "./TotalSeminars";
 import axios from "axios";
-import { Modal, Empty, Typography } from 'antd';
+import { Modal, Empty, Typography, Input } from 'antd';
 import ModalSeminarInfo from "./ModalSeminarInfo";
+import { BiSolidCommentDetail } from "react-icons/bi";
+import { MdEdit, MdDelete, MdAddComment } from "react-icons/md";
 
 
 const Home = () => {
 
   const year = new Date().getFullYear()
   const [data, setData] = useState([])
-  const[seminar, setSeminar] = useState(null)
+  const [filter, setFilter] = useState('')
+  const [seminar, setSeminar] = useState(null)
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   async function fetchData() {
@@ -54,6 +57,8 @@ const Home = () => {
     setIsModalOpen(false)
   }
 
+  const filtered = data.filter(item => (item.title).toLowerCase().includes(filter.toLowerCase()))
+
   return (
     <>
 
@@ -77,7 +82,16 @@ const Home = () => {
 
             <h1 className="mb-4">Seminars {year}</h1>
 
-            <div className="d-flex justify-content-end mb-4"><Link to="/create" className="btn btn-primary">Add new seminar +</Link></div>
+            <div className="toolbar mb-4">
+
+              <Input 
+                value={filter}
+                onChange={e => setFilter(e.target.value)}
+                placeholder="Enter a keyword to search"
+              />
+              
+              <Link to="/create" className="btn btn-success"><MdAddComment /> Add new</Link>
+              </div>
 
             <table className="table table-striped">
               <thead>
@@ -93,7 +107,7 @@ const Home = () => {
               </thead>
 
               <tbody>
-                {data.map((item, index) => (
+                {filtered.map((item, index) => (
               
                   <tr key={item.id}>
                     <td>{index + 1}</td>
@@ -102,9 +116,9 @@ const Home = () => {
                     <td>{item.city}</td>
                     <td>{item.date}</td>
                     <td>{item.time}</td>
-                    <td><Link to={`/read/${item.id}`} className="btn btn-warning">Read</Link></td>
-                    <td><button className="btn btn-primary" onClick={() => detailsHandler(item.id)}>Edit</button></td>
-                    <td><Link className="btn btn-danger" onClick={() => deleteHandler(item.id)}>Delete</Link></td>
+                    <td><Link to={`/read/${item.id}`} className="btn btn-warning"><BiSolidCommentDetail /></Link></td>
+                    <td><button className="btn btn-primary" onClick={() => detailsHandler(item.id)}><MdEdit /></button></td>
+                    <td><Link className="btn btn-danger" onClick={() => deleteHandler(item.id)}><MdDelete /></Link></td>
                   </tr>
                 
                 ))}
