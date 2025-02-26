@@ -125,7 +125,9 @@ const Home = () => {
               </tbody>
             </table>
 
-            <TotalSeminars length={data.length}/>
+            
+              <TotalSeminars length={filtered.length}/>
+            
 
           </>
         )}
