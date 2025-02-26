@@ -2,7 +2,7 @@
   "seminars": [
     {
       "id": "1",
-      "title": "Новинки Kosmoteros 2025",
+      "title": "Новинки Kosmoteros 2026",
       "description": "Обзор новых средств и методик от Kosmoteros.",
       "date": "12.02.2025",
       "time": "15:00",
@@ -67,14 +67,6 @@
       "date": "15.02.2025",
       "time": "17:00",
       "photo": "https://picsum.photos/id/8/750/730"
-    },
-    {
-      "id": "9",
-      "title": "Мастер-класс от Kosmoteros",
-      "description": "Практический мастер-класс по использованию инновационных косметических средств.",
-      "date": "17.02.2025",
-      "time": "18:00",
-      "photo": "https://picsum.photos/id/9/750/730"
     }
   ]
 }

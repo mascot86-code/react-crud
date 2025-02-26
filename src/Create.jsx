@@ -42,13 +42,13 @@ const Create = () => {
           onChange={e => setSeminar({...seminar, description: e.target.value})} />
           <input 
           className="form-control mb-1" 
-          type="text" 
+          type="date" 
           name="date" 
           placeholder="Seminar date"
           onChange={e => setSeminar({...seminar, date: e.target.value})} />
           <input 
           className="form-control mb-3" 
-          type="text" 
+          type="time" 
           name="time" 
           placeholder="Seminar time"
           onChange={e => setSeminar({...seminar, time: e.target.value})} />

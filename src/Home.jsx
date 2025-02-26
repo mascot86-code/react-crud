@@ -58,7 +58,9 @@ const Home = () => {
     <>
 
         {data.length <= 0 ? (
+          
           <Empty
+
             image="https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg"
             styles={{ image: { height: 60 } }}
             description={
@@ -68,7 +70,9 @@ const Home = () => {
             }
           >
           </Empty>
-        ):(
+
+          ):(
+
           <>
 
             <h1 className="mb-4">Seminars {year}</h1>
